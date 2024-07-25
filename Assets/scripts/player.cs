@@ -9,7 +9,7 @@ public class playerr : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.space) || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             direction = Vector3.up * strength;
         }
@@ -18,3 +18,4 @@ public class playerr : MonoBehaviour
 
 
 }
+
