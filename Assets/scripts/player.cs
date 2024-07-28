@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
-            if(touch.phase== TouchPhase.Began)
+            if (touch.phase == TouchPhase.Began)
             {
                 direction = Vector3.up * strength;
             }
@@ -46,12 +46,12 @@ public class Player : MonoBehaviour
             spriteIndex = 0;
         }
 
-        spriteRenderer.sprite = sprites[spriteIndex]; 
+        spriteRenderer.sprite = sprites[spriteIndex];
     }
     private void OnEnable()
     {
         Vector3 position = transform.position;
-        position.y = 0f;  
+        position.y = 0f;
         transform.position = position;
         direction = Vector3.zero;
     }
@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
             FindObjectOfType<GameManager>().GameOver();
 
         }
-        else if(other.gameObject.tag == "Scoring")
+        else if (other.gameObject.tag == "Scoring")
         {
             FindObjectOfType<GameManager>().IncreaseScore();
         }
